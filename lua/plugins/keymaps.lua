@@ -19,8 +19,8 @@ return {
     ---@param mapping wk.Mapping
     filter = function(mapping)
       -- example to exclude mappings without a description
-      -- return mapping.desc and mapping.desc ~= ""
-      return true
+      return mapping.desc and mapping.desc ~= ""
+      -- return true
     end,
     --- You can add any mappings here, or use `require('which-key').add()` later
     ---@type wk.Spec
@@ -124,7 +124,7 @@ return {
     },
     icons = {
       breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-      separator = "➜", -- symbol used between a key and it's label
+      separator = " ", -- symbol used between a key and it's label
       group = "+", -- symbol prepended to a group
       ellipsis = "…",
       -- set to false to disable all mapping icons,
