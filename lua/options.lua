@@ -27,3 +27,4 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 
 vim.cmd('set laststatus=0')
+vim.cmd('set conceallevel=3')
