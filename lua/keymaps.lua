@@ -16,11 +16,11 @@ vim.keymap.set('n', '<leader>n', ':bn<cr>',                     { desc = "Next B
 vim.keymap.set('n', '<leader>p', ':bp<cr>',                     { desc = "Previous Buffer" })
 vim.keymap.set('n', '<leader>c', ':bd<cr>',                     { desc = "Close Buffer" })
 
--- Resize
-vim.keymap.set("n", "<S-j>", "<cmd>resize +2<cr>",          { desc = "Increase Window Height" })
-vim.keymap.set("n", "<S-k>", "<cmd>resize -2<cr>",          { desc = "Decrease Window Height" })
-vim.keymap.set("n", "<S-h>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
-vim.keymap.set("n", "<S-l>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+-- Resize (using smart-splits)
+-- vim.keymap.set("n", "<S-j>", "<cmd>resize +2<cr>",          { desc = "Increase Window Height" })
+-- vim.keymap.set("n", "<S-k>", "<cmd>resize -2<cr>",          { desc = "Decrease Window Height" })
+-- vim.keymap.set("n", "<S-h>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+-- vim.keymap.set("n", "<S-l>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 
 -- Other
 vim.keymap.set('n', '<leader>q', ':q<cr>',                      { desc = "Exit Neovim" })
