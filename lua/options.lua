@@ -15,7 +15,6 @@ vim.g.maplocalleader = ","
 vim.g.background = "light"
 
 vim.opt.swapfile = false
-vim.opt.nu = true
 vim.opt.termguicolors = true
 vim.opt.number = false
 vim.opt.relativenumber = false
@@ -31,11 +30,20 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 function ToggleSignAndNumber()
     -- sort of a "ternary" operator in lua
-    vim.o.signcolumn = vim.o.signcolumn == "yes" and "no" or "yes"
+    -- vim.o.signcolumn = vim.o.signcolumn == "yes" and "no" or "yes"
     vim.o.relativenumber = not vim.o.relativenumber
+    if vim.o.laststatus == 0 then
+      vim.o.laststatus = 2
+    else
+      vim.o.laststatus = 0
+    end
 end
 
 local map = vim.api.nvim_set_keymap
 local default_opts = {noremap = true, silent = true}
 
 map('n', 'ts', ':lua ToggleSignAndNumber()<CR>', default_opts)
+
+vim.cmd('set noshowcmd')
+vim.cmd('set nowrap')
+vim.cmd('set noru')
