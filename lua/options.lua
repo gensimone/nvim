@@ -16,8 +16,12 @@ vim.g.background = "light"
 
 vim.opt.swapfile = false
 vim.opt.nu = true
-vim.opt.relativenumber = true
 vim.opt.termguicolors = true
+vim.opt.number = false
+vim.opt.relativenumber = false
+vim.opt.signcolumn = "no"
+vim.opt.laststatus = 0
+vim.opt.conceallevel = 3
 
 -- remove trailing whitespace
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
@@ -25,6 +29,13 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
+function ToggleSignAndNumber()
+    -- sort of a "ternary" operator in lua
+    vim.o.signcolumn = vim.o.signcolumn == "yes" and "no" or "yes"
+    vim.o.relativenumber = not vim.o.relativenumber
+end
 
-vim.cmd('set laststatus=0')
-vim.cmd('set conceallevel=3')
+local map = vim.api.nvim_set_keymap
+local default_opts = {noremap = true, silent = true}
+
+map('n', 'ts', ':lua ToggleSignAndNumber()<CR>', default_opts)
