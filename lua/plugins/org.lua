@@ -21,7 +21,7 @@ return {
             ['core.defaults'] = {},
             ['core.concealer'] = {
               config = {
-                folds = false,
+                folds = true,
                 icon_preset = "basic",
                 init_open_folds = "auto",
               },
