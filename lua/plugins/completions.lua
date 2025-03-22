@@ -23,6 +23,9 @@ return {
   {
     'hrsh7th/nvim-cmp',
     config = function()
+      vim.cmd("highlight Pmenu guibg=NONE")
+      vim.cmd("highlight Float guibg=NONE")
+      vim.cmd("highlight NormalFloat guibg=NONE")
       local cmp = require('cmp')
       require('luasnip.loaders.from_vscode').lazy_load()
 
@@ -31,6 +34,9 @@ return {
           expand = function(args)
             require('luasnip').lsp_expand(args.body)
           end,
+        },
+        view = {
+          entries = "custom" -- can be "custom", "wildmenu" or "native"
         },
         window = {
           completion = cmp.config.window.bordered(),

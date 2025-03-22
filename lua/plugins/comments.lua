@@ -11,7 +11,6 @@ return {
     keys = {
       { '<leader>/', ':CommentToggle<cr>', mode = { 'n', 'v' }, desc = 'Comment Toggle' },
     },
-    vim.keymap.del({'n', 'v'}, 'gc' ),
     config = function()
       require('nvim_comment').setup({
         create_mappings = false

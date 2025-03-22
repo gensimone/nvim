@@ -5,10 +5,14 @@
 -- ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║███████║
 --  ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.cmd('set noshowcmd')
+vim.cmd('set nowrap')
+vim.cmd('set noru')
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
@@ -21,6 +25,7 @@ vim.opt.relativenumber = false
 vim.opt.signcolumn = "no"
 vim.opt.laststatus = 0
 vim.opt.conceallevel = 3
+vim.opt.fillchars:append { eob = " " }
 
 -- remove trailing whitespace
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
@@ -43,7 +48,3 @@ local map = vim.api.nvim_set_keymap
 local default_opts = {noremap = true, silent = true}
 
 map('n', 'ts', ':lua ToggleSignAndNumber()<CR>', default_opts)
-
-vim.cmd('set noshowcmd')
-vim.cmd('set nowrap')
-vim.cmd('set noru')

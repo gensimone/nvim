@@ -25,6 +25,3 @@ vim.opt.rtp:prepend(lazypath)
 require("options")
 require("keymaps")
 require("lazy").setup("plugins")
-
--- This line needs to be here in order to work (IDKW)
-vim.cmd('hi NonText guifg=bg')
