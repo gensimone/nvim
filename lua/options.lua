@@ -36,7 +36,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 function ToggleSignAndNumber()
     -- sort of a "ternary" operator in lua
     -- vim.o.signcolumn = vim.o.signcolumn == "yes" and "no" or "yes"
-    vim.o.relativenumber = not vim.o.relativenumber
+    -- vim.o.relativenumber = not vim.o.relativenumber
+    vim.o.number = not vim.o.number
     if vim.o.laststatus == 0 then
       vim.o.laststatus = 2
     else

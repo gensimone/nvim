@@ -11,8 +11,36 @@ return {
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
-      -- "rcarriga/nvim-notify",
+      "rcarriga/nvim-notify",
     }
+  },
+  {
+    "rcarriga/nvim-notify",
+    config = function ()
+      require('notify').setup(
+      {
+        background_colour = "#000000",
+        fps = 60,
+        icons = {
+          DEBUG = "",
+          ERROR = "",
+          INFO = "",
+          TRACE = "✎",
+          WARN = ""
+        },
+        level = 2,
+        minimum_width = 50,
+        render = "minimal",
+        stages = "static",
+        time_formats = {
+          notification = "%T",
+          notification_history = "%FT%T"
+        },
+        timeout = 1250,
+        top_down = true,
+        require("telescope").load_extension("notify")
+      })
+    end
   },
   {
     "xiyaowong/transparent.nvim",

@@ -13,7 +13,7 @@ return {
     keys = {
       { '<leader>oj', ':Neorg journal custom<cr>',  mode = { 'n' }, desc = 'Journal' },
       { '<leader>on', ':Neorg workspace notes<cr>', mode = { 'n' }, desc = 'Notes' },
-      { '<leader>ot', ':Neorg toc<cr>',  mode = { 'n' }, desc = 'TOC' },
+      { '<leader>ot', ':Neorg toc<cr>',             mode = { 'n' }, desc = 'TOC' },
     },
     config = function ()
       require('neorg').setup({

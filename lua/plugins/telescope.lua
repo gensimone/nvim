@@ -16,6 +16,7 @@ return {
       { '<leader>fg', ':Telescope live_grep<cr>',   mode = { 'n' }, desc = 'Live Grep' },
       { '<leader>fw', ':Telescope grep_string<cr>', mode = { 'n' }, desc = 'Grep String' },
       { '<leader>fr', ':Telescope oldfiles<cr>',    mode = { 'n' }, desc = 'Recent Files' },
+      { '<leader>fn', ':Telescope notify<cr>',      mode = { 'n' }, desc = 'Notifications' },
       { '<leader>fb', ':Telescope buffers<cr>',     mode = { 'n' }, desc = 'Buffers' },
       { '<leader>lt', ':Telescope<cr>',             mode = { 'n' }, desc = 'Launch Telescope' },
       -- 'search_dirs' specific
