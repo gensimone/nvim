@@ -65,9 +65,10 @@ return {
             ['core.dirman'] = {
               config = {
                 workspaces = {
-                  notes = '~/Notes',
+                  university = '~/Norgs/University',
+                  projects = '~/Norgs/Projects',
                 },
-                default_workspace = "notes"
+                default_workspace = "university"
               }
             },
         }
