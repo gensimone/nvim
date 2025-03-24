@@ -36,8 +36,8 @@ return {
           notification = "%T",
           notification_history = "%FT%T"
         },
-        timeout = 1250,
-        top_down = true,
+        timeout = 1500,
+        top_down = false,
         require("telescope").load_extension("notify")
       })
     end
