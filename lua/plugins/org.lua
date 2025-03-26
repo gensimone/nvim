@@ -12,7 +12,8 @@ return {
     version = '*',
     keys = {
       { '<leader>oj', ':Neorg journal custom<cr>',  mode = { 'n' }, desc = 'Journal' },
-      { '<leader>on', ':Neorg workspace notes<cr>', mode = { 'n' }, desc = 'Notes' },
+      { '<leader>ou', ':Neorg workspace university<cr>', mode = { 'n' }, desc = 'University' },
+      { '<leader>op', ':Neorg workspace projects<cr>', mode = { 'n' }, desc = 'Projects' },
       { '<leader>ot', ':Neorg toc<cr>',             mode = { 'n' }, desc = 'TOC' },
     },
     config = function ()
@@ -55,7 +56,7 @@ return {
             },
             ['core.journal'] = {
               config = {
-                journal_folder = 'Journal',
+                journal_folder = '~/Journal',
                 strategy = 'nested',
                 template_name = 'template.norg',
                 use_template = true,
@@ -65,8 +66,8 @@ return {
             ['core.dirman'] = {
               config = {
                 workspaces = {
-                  university = '~/Norgs/University',
-                  projects = '~/Norgs/Projects',
+                  university = '~/University',
+                  projects = '~/Projects',
                 },
                 default_workspace = "university"
               }
