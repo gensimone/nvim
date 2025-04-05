@@ -1,10 +1,3 @@
---  ██████╗ ██████╗  ██████╗
--- ██╔═══██╗██╔══██╗██╔════╝
--- ██║   ██║██████╔╝██║  ███╗
--- ██║   ██║██╔══██╗██║   ██║
--- ╚██████╔╝██║  ██║╚██████╔╝
---  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-
 return {
   {
     'nvim-neorg/neorg',
@@ -56,7 +49,7 @@ return {
             },
             ['core.journal'] = {
               config = {
-                journal_folder = '~/Journal',
+                journal_folder = '~/journal',
                 strategy = 'nested',
                 template_name = 'template.norg',
                 use_template = true,
@@ -66,8 +59,8 @@ return {
             ['core.dirman'] = {
               config = {
                 workspaces = {
-                  university = '~/University',
-                  projects = '~/Projects',
+                  university = '~/university',
+                  projects = '~/projects',
                 },
                 default_workspace = "university"
               }
