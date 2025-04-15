@@ -14,7 +14,7 @@ return {
     },
     opts = {
       projects = {
-        '~/Sources/*',
+        '~/sources/*',
         '~/.config/nvim'
       },
 
