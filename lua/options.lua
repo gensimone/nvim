@@ -18,6 +18,13 @@ vim.opt.signcolumn = "no"
 vim.opt.laststatus = 2
 vim.opt.conceallevel = 3
 vim.opt.fillchars:append { eob = " " }
+vim.diagnostic.config({
+  virtual_text = false
+})
+
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- remove trailing whitespace
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
