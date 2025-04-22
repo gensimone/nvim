@@ -25,7 +25,7 @@ return {
             enable_preview = true,
           },
           find_files = {
-            find_command = { 'rg', '--files', '--hidden', '--glob', '!**/.git/*' },
+            find_command = { "fd", "--hidden", "--type", "f", "--color", "never", "--no-ignore-vcs" }
           },
         },
         defaults = require('telescope.themes').get_ivy {

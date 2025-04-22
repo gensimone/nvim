@@ -12,6 +12,13 @@ return {
     config = function ()
       require('neorg').setup({
         load = {
+            ['core.export'] = {
+              config = {
+                markdown = {
+                  extensions = { "all" },
+                },
+              }
+            },
             ['core.defaults'] = {},
             ['core.qol.toc'] = {
               config = {

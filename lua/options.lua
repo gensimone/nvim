@@ -15,6 +15,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.signcolumn = "no"
+vim.opt.undofile = true
 vim.opt.laststatus = 2
 vim.opt.conceallevel = 3
 vim.opt.fillchars:append { eob = " " }
